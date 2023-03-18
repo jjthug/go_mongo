@@ -12,14 +12,14 @@ func main() {
 	router.POST("/", routes.CreateUser)
 
 	// called as localhost:3000/getOne/{id}
-	router.GET("getOne/:postId", routes.ReadOneUser)
+	router.GET("getOne/:userId", routes.ReadOneUser)
 	router.GET("/getUserFromTags", routes.GetUsersFromTags)
 
 	// called as localhost:3000/update/{id}
-	router.PUT("/update/:postId", routes.UpdateUser)
+	router.PUT("/update/:userId", routes.UpdateUser)
 
 	// called as localhost:3000/delete/{id}
-	router.DELETE("/delete/:postId", routes.DeleteUser)
+	router.DELETE("/delete/:userId", routes.DeleteUser)
 
 	err := router.Run("localhost:8080")
 	if err != nil {
